@@ -1,5 +1,4 @@
-.card {
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700;800&display=swap');
+
+
+@tailwind utilities;
