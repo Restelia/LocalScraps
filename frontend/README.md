@@ -1,16 +1,41 @@
-# React + Vite
+# Local Scraps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A marketplace for sharing and selling food scraps locally. Built with React (Vite) on the frontend and Python on the backend.
 
-Currently, two official plugins are available:
+### Running the Frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+1. cd frontend
 
-## React Compiler
+2. npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. npm run dev
+```
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+CS422-LocalScraps/
+│
+├── frontend/                       # React frontend (Vite)
+│   ├── public/                     # Static assets (favicon, etc.)
+│   ├── src/
+│   │   ├── components/             # Reusable UI components
+│   │   │   ├── Header.jsx          # Top bar with title and notification bell
+│   │   │   ├── Navbar.jsx          # Shop / Sell / User navigation tabs
+│   │   │   └── FoodCard.jsx        # Individual food item widget
+│   │   │
+│   │   ├── pages/                  # One file per page/route
+│   │   │   ├── ShopPage.jsx        # Main shop page with search, sort, and food grid
+│   │   │   ├── SellPage.jsx        # Sell page (placeholder)
+│   │   │   └── UserPage.jsx        # User profile page (placeholder)
+│   │   │
+│   │   ├── App.jsx                 # Root component, handles page navigation
+│   │   ├── App.css                 # Global styles and CSS variables
+│   │   └── main.jsx                # Entry point — mounts App into the DOM
+│   │
+│   ├── package.json                # Frontend dependencies and scripts
+│   └── vite.config.js              # Vite configuration
+│
+└── backend/                        # Python backend?? (coming soon)
+```
