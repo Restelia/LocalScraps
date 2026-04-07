@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <title>LocalScraps</title>
+    <script>
+      (function() {
+        var search = window.location.search;
+        if (search.startsWith('?p=')) {
+          var path = search.slice(3).replace(/~and~/g, '&');
+          var url = window.location.pathname + (path ? '/' + path : '') + window.location.hash;
+          history.replaceState(null, null, url);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
