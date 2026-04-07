@@ -5,7 +5,7 @@ A marketplace for sharing and selling food scraps locally. Built with React (Vit
 ### Running the Frontend
 
 ```bash
-1. cd frontend
+1. cd FrontEnd
 
 2. npm install
 
@@ -17,7 +17,7 @@ A marketplace for sharing and selling food scraps locally. Built with React (Vit
 ```
 CS422-LocalScraps/
 │
-├── frontend/                       # React frontend (Vite)
+├── FrontEnd/                       # React frontend (Vite)
 │   ├── public/                     # Static assets (favicon, etc.)
 │   ├── src/
 │   │   ├── components/             # Reusable UI components
