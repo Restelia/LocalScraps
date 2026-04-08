@@ -8,27 +8,61 @@ export default function Header() {
     <>
       <div className="flex items-center justify-between border-4 border-[#a8b98a] rounded-2xl px-5 py-3 mb-3 bg-[#f0ede3]">
         <div className="flex-1" />
+
         <h1
           className="flex-1 text-center text-4xl text-[#8a9e6b] tracking-widest"
           style={{ fontFamily: "'Luckiest Guy', cursive" }}
         >
           Local Scraps
         </h1>
-        <div className="flex-1 flex justify-end">
+
+        {/* Right side — now NOT touching the right wall */}
+        <div className="flex-1 flex justify-end pr-3">
           <button
             onClick={() => setShowMessages(!showMessages)}
-            className="relative border-2 border-[#a8b98a] rounded-xl px-3 py-2 text-xl text-[#8a9e6b] hover:bg-[#c4d4a0] transition-colors"
+            className="
+              relative 
+              rounded-xl 
+              border-0
+              w-14 
+              h-14 
+              flex 
+              items-center 
+              justify-center 
+              hover:bg-[#c4d4a0] 
+              transition-colors
+            "
           >
-            🔔
-            {/* Notification badge */}
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            {/* Bell */}
+            <span className="text-[30px] leading-none">🔔</span>
+
+            {/* Badge position */}
+            <span
+              className="
+                absolute
+                top-0
+                right-0
+                translate-x-1/2
+                -translate-y-1/2
+                bg-red-500 
+                text-white 
+                text-[10px] 
+                font-bold 
+                rounded-full 
+                w-5 
+                h-5 
+                flex 
+                items-center 
+                justify-center
+                shadow
+              "
+            >
               1
             </span>
           </button>
         </div>
       </div>
 
-      {/* Messages Panel */}
       {showMessages && (
         <MessagesPanel onClose={() => setShowMessages(false)} />
       )}

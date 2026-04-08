@@ -26,7 +26,7 @@ export default function ShopPage() {
     <div>
       {/* Search + Sort */}
       <div className="flex items-center gap-3 mb-4 flex-wrap">
-        <div className="flex items-center flex-1 border-4 border-[#a8b98a] rounded-2xl px-4 py-2 bg-[#f0ede3] gap-2 min-w-[200px]">
+        <div className="flex items-center flex-1 border-4 border-[#a8b98a] rounded-2xl px-4 py-2 bg-[#f0ede3] gap-2 min-w-[200px]" style={{ lineHeight: 2.5 }}>
           <span>🔍</span>
           <input
             className="border-none outline-none bg-transparent font-[Nunito] text-base text-[#4a5a30] w-full placeholder-[#aab890]"
@@ -35,7 +35,7 @@ export default function ShopPage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <div className="flex items-center gap-2 font-extrabold text-[#4a5a30]">
+        <div className="flex items-center gap-2 font-extrabold text-[#4a5a30] border-4 border-[#a8b98a] bg-[#f0ede3]" style={{ lineHeight: 2.5 }}>
           <span>Sort by:</span>
           <select
             value={sortBy}
